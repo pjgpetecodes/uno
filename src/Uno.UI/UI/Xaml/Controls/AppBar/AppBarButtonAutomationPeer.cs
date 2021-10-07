@@ -4,8 +4,6 @@ using System.Text;
 using DirectUI;
 using Windows.UI.Xaml.Automation.Peers;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls;
-using AppBarButton = Windows.UI.Xaml.Controls.AppBarButton;
 using Windows.UI.Xaml.Automation;
 
 namespace Windows.UI.Xaml.Automation.Peers

@@ -155,9 +155,9 @@
         </Setter>
     </Style>
 
-    <Style TargetType="muxc:CommandBar" BasedOn="{StaticResource DefaultCommandBarStyle}" />
+    <Style TargetType="CommandBar" BasedOn="{StaticResource DefaultCommandBarStyle}" />
 
-    <Style x:Key="DefaultCommandBarStyle" TargetType="muxc:CommandBar">
+    <Style x:Key="DefaultCommandBarStyle" TargetType="CommandBar">
         <Setter Property="Background" Value="{ThemeResource CommandBarBackground}" />
         <Setter Property="Foreground" Value="{ThemeResource CommandBarForeground}" />
         <Setter Property="IsTabStop" Value="False" />
@@ -170,7 +170,7 @@
         <Setter Property="CommandBarOverflowPresenterStyle" Value="{ThemeResource DefaultCommandBarOverflowPresenterStyle}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="muxc:CommandBar">
+                <ControlTemplate TargetType="CommandBar">
                     <Grid x:Name="LayoutRoot">
                         <Grid.Resources>
                             <Storyboard x:Key="OverlayOpeningAnimation">
@@ -989,9 +989,9 @@
         </Setter>
     </Style>
 
-    <Style TargetType="muxc:CommandBarOverflowPresenter" BasedOn="{StaticResource DefaultCommandBarOverflowPresenterStyle}" />
+    <Style TargetType="CommandBarOverflowPresenter" BasedOn="{StaticResource DefaultCommandBarOverflowPresenterStyle}" />
 
-    <Style x:Key="DefaultCommandBarOverflowPresenterStyle" TargetType="muxc:CommandBarOverflowPresenter">
+    <Style x:Key="DefaultCommandBarOverflowPresenterStyle" TargetType="CommandBarOverflowPresenter">
         <Setter Property="Background" Value="{ThemeResource CommandBarOverflowPresenterBackground}" />
         <Setter Property="BorderBrush" Value="{ThemeResource CommandBarOverflowPresenterBorderBrush}" />
         <Setter Property="Padding" Value="{ThemeResource CommandBarOverflowPresenterBorderPadding}" />
@@ -1006,7 +1006,7 @@
         <Setter Property="CornerRadius" Value="{ThemeResource OverlayCornerRadius}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="muxc:CommandBarOverflowPresenter">
+                <ControlTemplate TargetType="CommandBarOverflowPresenter">
                     <Grid x:Name="LayoutRoot"
                         Background="{TemplateBinding Background}"
                         BackgroundSizing="OuterBorderEdge"
@@ -1050,7 +1050,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="CommandBarWithoutRevealStyle" TargetType="muxc:CommandBar">
+    <Style x:Key="CommandBarWithoutRevealStyle" TargetType="CommandBar">
         <Setter Property="Background" Value="{ThemeResource CommandBarBackground}" />
         <Setter Property="Foreground" Value="{ThemeResource CommandBarForeground}" />
         <Setter Property="IsTabStop" Value="False" />
@@ -1063,7 +1063,7 @@
         <Setter Property="CommandBarOverflowPresenterStyle" Value="{ThemeResource DefaultCommandBarOverflowPresenterStyle}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="muxc:CommandBar">
+                <ControlTemplate TargetType="CommandBar">
                     <Grid x:Name="LayoutRoot">
                         <Grid.Resources>
                             <Storyboard x:Key="OverlayOpeningAnimation">
@@ -1780,19 +1780,19 @@
                                     <Grid.RenderTransform>
                                         <TranslateTransform x:Name="OverflowContentRootTransform" X="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=CommandBarTemplateSettings.OverflowContentHorizontalOffset}" />
                                     </Grid.RenderTransform>
-                                    <muxc:CommandBarOverflowPresenter x:Name="SecondaryItemsControl"
+                                    <CommandBarOverflowPresenter x:Name="SecondaryItemsControl"
                                         Style="{TemplateBinding CommandBarOverflowPresenterStyle}"
                                         IsTabStop="False">
-                                        <muxc:CommandBarOverflowPresenter.RenderTransform>
+                                        <CommandBarOverflowPresenter.RenderTransform>
                                             <TranslateTransform x:Name="OverflowContentTransform" />
-                                        </muxc:CommandBarOverflowPresenter.RenderTransform>
-                                        <muxc:CommandBarOverflowPresenter.ItemContainerStyle>
+                                        </CommandBarOverflowPresenter.RenderTransform>
+                                        <CommandBarOverflowPresenter.ItemContainerStyle>
                                             <Style TargetType="FrameworkElement">
                                                 <Setter Property="HorizontalAlignment" Value="Stretch" />
                                                 <Setter Property="Width" Value="NaN" />
                                             </Style>
-                                        </muxc:CommandBarOverflowPresenter.ItemContainerStyle>
-                                    </muxc:CommandBarOverflowPresenter>
+                                        </CommandBarOverflowPresenter.ItemContainerStyle>
+                                    </CommandBarOverflowPresenter>
                                 </Grid>
                             </Popup>
                             <Rectangle x:Name="HighContrastBorder"

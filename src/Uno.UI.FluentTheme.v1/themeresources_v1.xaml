@@ -11578,8 +11578,8 @@
       </Setter.Value>
     </Setter>
   </Style>
-  <Style TargetType="controls:CommandBar" BasedOn="{StaticResource DefaultCommandBarStyle}" />
-  <Style x:Key="DefaultCommandBarStyle" TargetType="controls:CommandBar">
+  <Style TargetType="CommandBar" BasedOn="{StaticResource DefaultCommandBarStyle}" />
+  <Style x:Key="DefaultCommandBarStyle" TargetType="CommandBar">
     <Setter Property="Background" Value="{ThemeResource CommandBarBackground}" />
     <Setter Property="Foreground" Value="{ThemeResource CommandBarForeground}" />
     <Setter Property="IsTabStop" Value="False" />
@@ -11592,7 +11592,7 @@
     <Setter Property="CommandBarOverflowPresenterStyle" Value="{ThemeResource DefaultCommandBarOverflowPresenterStyle}" />
     <Setter Property="Template">
       <Setter.Value>
-        <ControlTemplate TargetType="controls:CommandBar">
+        <ControlTemplate TargetType="CommandBar">
           <Grid x:Name="LayoutRoot">
             <Grid.Resources>
               <Storyboard x:Key="OverlayOpeningAnimation">
@@ -12349,8 +12349,8 @@
       </Setter.Value>
     </Setter>
   </Style>
-  <Style TargetType="controls:CommandBarOverflowPresenter" BasedOn="{StaticResource DefaultCommandBarOverflowPresenterStyle}" />
-  <Style x:Key="DefaultCommandBarOverflowPresenterStyle" TargetType="controls:CommandBarOverflowPresenter">
+  <Style TargetType="CommandBarOverflowPresenter" BasedOn="{StaticResource DefaultCommandBarOverflowPresenterStyle}" />
+  <Style x:Key="DefaultCommandBarOverflowPresenterStyle" TargetType="CommandBarOverflowPresenter">
     <Setter Property="Background" Value="{ThemeResource CommandBarOverflowPresenterBackground}" />
     <Setter Property="BorderBrush" Value="{ThemeResource CommandBarOverflowPresenterBorderBrush}" />
     <Setter Property="Padding" Value="{ThemeResource CommandBarOverflowPresenterBorderPadding}" />
@@ -12365,7 +12365,7 @@
     <Setter Property="CornerRadius" Value="{ThemeResource OverlayCornerRadius}" />
     <Setter Property="Template">
       <Setter.Value>
-        <ControlTemplate TargetType="controls:CommandBarOverflowPresenter">
+        <ControlTemplate TargetType="CommandBarOverflowPresenter">
           <Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}" BackgroundSizing="OuterBorderEdge" Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{ThemeResource CommandBarOverflowPresenterBorderThickness}" CornerRadius="{TemplateBinding CornerRadius}">
             <VisualStateManager.VisualStateGroups>
               <VisualStateGroup x:Name="DisplayModeStates">
@@ -12392,7 +12392,7 @@
       </Setter.Value>
     </Setter>
   </Style>
-  <Style x:Key="CommandBarWithoutRevealStyle" TargetType="controls:CommandBar">
+  <Style x:Key="CommandBarWithoutRevealStyle" TargetType="CommandBar">
     <Setter Property="Background" Value="{ThemeResource CommandBarBackground}" />
     <Setter Property="Foreground" Value="{ThemeResource CommandBarForeground}" />
     <Setter Property="IsTabStop" Value="False" />
@@ -12405,7 +12405,7 @@
     <Setter Property="CommandBarOverflowPresenterStyle" Value="{ThemeResource DefaultCommandBarOverflowPresenterStyle}" />
     <Setter Property="Template">
       <Setter.Value>
-        <ControlTemplate TargetType="controls:CommandBar">
+        <ControlTemplate TargetType="CommandBar">
           <Grid x:Name="LayoutRoot">
             <Grid.Resources>
               <Storyboard x:Key="OverlayOpeningAnimation">
@@ -13086,17 +13086,17 @@
                   <Grid.RenderTransform>
                     <TranslateTransform x:Name="OverflowContentRootTransform" X="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=CommandBarTemplateSettings.OverflowContentHorizontalOffset}" />
                   </Grid.RenderTransform>
-                  <controls:CommandBarOverflowPresenter x:Name="SecondaryItemsControl" Style="{TemplateBinding CommandBarOverflowPresenterStyle}" IsTabStop="False">
-                    <controls:CommandBarOverflowPresenter.RenderTransform>
+                  <CommandBarOverflowPresenter x:Name="SecondaryItemsControl" Style="{TemplateBinding CommandBarOverflowPresenterStyle}" IsTabStop="False">
+                    <CommandBarOverflowPresenter.RenderTransform>
                       <TranslateTransform x:Name="OverflowContentTransform" />
-                    </controls:CommandBarOverflowPresenter.RenderTransform>
-                    <controls:CommandBarOverflowPresenter.ItemContainerStyle>
+                    </CommandBarOverflowPresenter.RenderTransform>
+                    <CommandBarOverflowPresenter.ItemContainerStyle>
                       <Style TargetType="FrameworkElement">
                         <Setter Property="HorizontalAlignment" Value="Stretch" />
                         <Setter Property="Width" Value="NaN" />
                       </Style>
-                    </controls:CommandBarOverflowPresenter.ItemContainerStyle>
-                  </controls:CommandBarOverflowPresenter>
+                    </CommandBarOverflowPresenter.ItemContainerStyle>
+                  </CommandBarOverflowPresenter>
                 </Grid>
               </Popup>
               <Rectangle x:Name="HighContrastBorder" x:DeferLoadStrategy="Lazy" Grid.ColumnSpan="2" Visibility="Collapsed" VerticalAlignment="Stretch" Stroke="{ThemeResource CommandBarHighContrastBorder}" StrokeThickness="1" />

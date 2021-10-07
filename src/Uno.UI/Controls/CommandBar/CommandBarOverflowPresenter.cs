@@ -1,4 +1,6 @@
 ﻿#if XAMARIN
+using Windows.UI.Xaml.Controls;
+
 namespace Uno.UI.Controls
 {
 	public  partial class CommandBarOverflowPresenter : ItemsControl

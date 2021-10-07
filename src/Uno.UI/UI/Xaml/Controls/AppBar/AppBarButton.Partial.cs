@@ -13,9 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media.Animation;
-using static Windows.UI.Xaml.Controls._Tracing;
-using AppBarButtonAutomationPeer = Windows.UI.Xaml.Automation.Peers.AppBarButtonAutomationPeer;
-using AppBarButtonTemplateSettings = Windows.UI.Xaml.Controls.Primitives.AppBarButtonTemplateSettings;
+using static Microsoft.UI.Xaml.Controls._Tracing;
 
 namespace Windows.UI.Xaml.Controls
 {

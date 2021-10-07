@@ -154,8 +154,7 @@ function enableSearch() {
             if (query && (query.length >= 3)) {
                 worker.postMessage({q: query});
             }
-
-        }).then(r => r.resolve());
+        });
     }
 
     // Highlight the searching keywords
